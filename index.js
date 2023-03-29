@@ -38,3 +38,29 @@ function auto(km){
 function tomegk(ut,fo){
     return ut*fo*2600
 }
+//a fohoz ne felejtsd belevenni a tanárt is lmao
+class prototipus{
+    constructor(fo,km=0,ut=0,nap){
+        this.fo = fo;
+        this.fo2 = fo;
+        this.km = km;
+        this.ut = ut;
+        this.nap = nap;
+        this.k = kocsi(this.km,this.fo,this.nap)
+        this.b = bu(this.fo,this.km,this.nap)
+        this.t = tomeg(this.fo,this.ut,this.nap)
+        this.v = vegyes(this.fo,this.km,this.ut,this.nap,this.t,this.b,this.k)
+    }
+    vegyes(fo,km,ut,nap,t,b,k){
+        
+    }
+    tomeg(fo,ut,nap){
+        return tomegk(ut,fo)/fo+szar(fo,nap)/fo
+    }
+    bu(fo,km,nap){
+        return 
+    }
+    kocsi(km,fo,nap){
+
+    }
+}
