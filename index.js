@@ -46,21 +46,27 @@ class prototipus{
         this.km = km;
         this.ut = ut;
         this.nap = nap;
-        this.k = kocsi(this.km,this.fo,this.nap)
-        this.b = bu(this.fo,this.km,this.nap)
+        this.k = kocsi(this.km,this.fo,this.nap,this.fo2)
+        this.b = bu(this.fo,this.km,this.nap,this.fo2)
         this.t = tomeg(this.fo,this.ut,this.nap)
-        this.v = vegyes(this.fo,this.km,this.ut,this.nap,this.t,this.b,this.k)
+        this.v = vegyes(this.fo,this.km,this.ut,this.nap,this.t,this.b,this.k,this.fo2)
     }
-    vegyes(fo,km,ut,nap,t,b,k){
-        
+    vegyes(fo,km,ut,nap,t,b,k,fo2){
+
     }
     tomeg(fo,ut,nap){
         return tomegk(ut,fo)/fo+szar(fo,nap)/fo
     }
-    bu(fo,km,nap){
-        return 
+    bu(fo,km,nap,fo2){        
+        if (fo >= 50){
+            fo2 += Math.ceil(fo/49)
+        }
+        return busz(km,nap,fo)[busz(km,nap,fo).findIndex('km:')+1]+busz(km,nap,fo)[busz(km,nap,fo).findIndex('napi:')+1]+szar((fo+fo2),nap)
     }
-    kocsi(km,fo,nap){
-
+    kocsi(km,fo,nap,fo2){
+        if (fo >= 5){
+            fo2 += Math.ceil(fo/3)
+        }        
+        return auto(km)[auto(km).findIndex('km:')+1]+szar((fo+fo2),nap)
     }
 }
