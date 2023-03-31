@@ -49,10 +49,6 @@ class prototipus{
         this.k = kocsi(this.km,this.fo,this.nap,this.fo2)
         this.b = bu(this.fo,this.km,this.nap,this.fo2)
         this.t = tomeg(this.fo,this.ut,this.nap)
-        this.v = vegyes(this.fo,this.km,this.ut,this.nap,this.t,this.b,this.k,this.fo2)
-    }
-    vegyes(fo,km,ut,nap,t,b,k,fo2){
-
     }
     tomeg(fo,ut,nap){
         return tomegk(ut,fo)/fo+szar(fo,nap)/fo
