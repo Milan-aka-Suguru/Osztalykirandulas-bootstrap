@@ -38,31 +38,3 @@ function auto(km){
 function tomegk(ut,fo){
     return ut*fo*2600
 }
-//a fohoz ne felejtsd belevenni a tanárt is lmao
-class prototipus{
-    constructor(fo,km=0,ut=0,nap){
-        this.fo = fo;
-        this.fo2 = fo;
-        this.km = km;
-        this.ut = ut;
-        this.nap = nap;
-        this.k = kocsi(this.km,this.fo,this.nap,this.fo2)
-        this.b = bu(this.fo,this.km,this.nap,this.fo2)
-        this.t = tomeg(this.fo,this.ut,this.nap)
-    }
-    tomeg(fo,ut,nap){
-        return tomegk(ut,fo)/fo+szar(fo,nap)/fo
-    }
-    bu(fo,km,nap,fo2){        
-        if (fo >= 50){
-            fo2 += Math.ceil(fo/49)
-        }
-        return busz(km,nap,fo)[busz(km,nap,fo).findIndex('km:')+1]+busz(km,nap,fo)[busz(km,nap,fo).findIndex('napi:')+1]+szar((fo+fo2),nap)
-    }
-    kocsi(km,fo,nap,fo2){
-        if (fo >= 5){
-            fo2 += Math.ceil(fo/3)
-        }        
-        return auto(km)[auto(km).findIndex('km:')+1]+szar((fo+fo2),nap)
-    }
-}

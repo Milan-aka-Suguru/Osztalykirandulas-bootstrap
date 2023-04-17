@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Költségvetés</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Szállás2.hu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="Szallas.html">Szállás <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Latnivalok.html">Látnivalók</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Koltsegvetes.html">Költségvetés</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Elerhetosegek.html">Elérhetőség</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Inputs/Outputs -->
+    <p class="question">Hány főre foglalszállást?</p><input type="number" class="inputs">
+    <p class="question">Hány napra foglalszállást?</p><input type="number" class="inputs">
+    <p class="question">Mivel utazik?</p><input type="text" class="inputs">
+    <br><br>
+    <button id="calc">Kiszámol</button>
+
+
+    <style>
+
+    body{
+        background-color: rgb(94, 72, 62);
+    }
+    
+    .question{
+        color: rgb(255, 255, 255);
+        position: relative;
+        margin-left: 15px;
+    }
+
+    .inputs{
+        position: relative;
+        margin-left: 15px;
+    }
+    #calc{
+        position: relative;
+        margin-left: 15px;
+        height: 40px;
+        width: 190px;
+    }
+    </style>
+</html>
