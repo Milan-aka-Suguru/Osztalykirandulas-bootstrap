@@ -1,7 +1,4 @@
 let tav = 250;
-let tanulok = 49;
-let tanar = 1;
-let sofor = 1;
 //meg tudom magyarázni!!! sz = szállás ar = ár, rossz az aki rosszra gondol 😁
 function szar(N,M){    
     switch(true){
@@ -29,12 +26,24 @@ function szar(N,M){
             alert('Hiba.')
     }
 }
-function busz(km,nap,utas){
-    return ['km:',640*km*Math.ceil(utas/49),'napi:',40000*nap*Math.ceil(utas/49)]
-}
-function auto(km){
-    return ['km:',84*km,'benzin:',(0.07*1.5*km)]
-}
-function tomegk(ut,fo){
-    return ut*fo*2600
+function szamol(f,n,u){
+    function busz(km,nap,utas){
+        return ['&nbsp;km:',640*km*Math.ceil(utas/49)+'Ft','&nbsp;napi:',40000*nap*Math.ceil(utas/49)+'Ft']
+    }
+    function auto(km){
+        return ['km:',84*km,'benzin:',(0.07*1.5*km)]
+    }
+    function tomegk(ut,fo){
+        return ut*fo*2600
+    }
+        if(u.toLowerCase()=="busz"){
+            console.log(u)
+            document.getElementById('ered').innerHTML='A busz:'+busz(tav,n,f)+'\nA szállás az egész foglalási időre:&nbsp;'+szar(f,n)+'Ft.'            
+        }else if(u.toLowerCase()=='autó'){
+            console.log(u)
+            document.getElementById('ered').innerHTML=auto(tav,f)[1]+auto(tav,f)[3]+szar((f+Math.ceil(f/4)),n)+'Ft.'
+        }else if(u.toLowerCase()=='tömegközlekedés'){
+            console.log(u)
+            document.getElementById('ered').innerHTML=tomegk(tav,f)+szar((f+Math.ceil(f/4)),n)+'Ft.'
+    }
 }

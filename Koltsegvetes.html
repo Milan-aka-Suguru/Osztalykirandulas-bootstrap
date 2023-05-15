@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Költségvetés</title>
+    <script src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -34,12 +35,12 @@
     </nav>
 
     <!-- Inputs/Outputs -->
-    <p class="question">Hány főre foglalszállást?</p><input type="number" class="inputs">
-    <p class="question">Hány napra foglalszállást?</p><input type="number" class="inputs">
-    <p class="question">Mivel utazik?</p><input type="text" class="inputs">
+    <p class="question">Hány főre foglalszállást?</p><input type="number" id="f" class="inputs">
+    <p class="question">Hány napra foglalszállást?</p><input type="number" id="n" class="inputs">
+    <p class="question">Mivel utazik?</p><input type="text" id="u" class="inputs">
     <br><br>
-    <button id="calc">Kiszámol</button>
-
+    <button id="calc" onclick="szamol(document.getElementById('f').value,document.getElementById('n').value,document.getElementById('u').value)">Kiszámol</button>
+    <p id="ered"></p>
 
     <style>
 
